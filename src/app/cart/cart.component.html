@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+    <body class="home-1">
+      <app-main-menu></app-main-menu>
+
+        <!-- breadcrumb start -->
+        <section class="about-breadcrumb">
+            <div class="about-back section-tb-padding" style="background-image: url(assets/image/about-image.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="about-l">
+                                <ul class="about-link">
+                                    <li class="go-home"><a href="index1.html">Home</a></li>
+                                    <li class="about-p"><span>Your shopping cart</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb end -->
+        <!-- cart start -->
+        <section class="cart-page section-tb-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                        <div class="cart-area" *ngFor="let item of cartInfo; let i = index;">
+                            <div class="cart-details">
+                                <div class="cart-all-pro">
+                                    <div class="cart-pro">
+                                        <div class="cart-pro-image">
+                                            <a><img src="assets/img/product/{{item.img}}" class="img-fluid" alt="image"></a>
+                                        </div>
+                                        <div class="pro-details">
+                                            <h4><a>{{item.name}}</a></h4>
+                                            <span class="pro-size"><span class="size">Size:</span> 1 kg</span>
+                                            <span class="cart-pro-price">$ {{item.price}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="qty-item">
+                                        <div class="center">
+                                            <div class="plus-minus">
+                                                <span>
+                                                    <button (click)="decBtn(i)" class="btn btn-primary">-</button>
+                                                    <button class="btn btn-white">{{item.size}}</button>
+                                                    <button (click)="incBtn(i)" class="btn btn-primary">+</button>
+                                                </span>
+                                            </div>
+                                            <a (click)="removeCart(i)" class="pro-remove">Remove</a>
+                                        </div>
+                                    </div>
+                                    <div class="all-pro-price">
+                                        <span>$ {{item.price * item.size}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="cart-total">
+                            <div class="cart-price">
+                                <span>Subtotal</span>
+                                <span class="total">${{subTotal}}</span>
+                            </div>
+                            <div class="cart-price">
+                              <span>Shipping</span>
+                              <span class="total">${{shipping}}</span>
+                            </div>
+                            <div class="cart-price">
+                              <span>Vat</span>
+          <span class="total">${{vat}}</span>
+                            </div>
+                            <div class="cart-info">
+                                <a (click)="updateCart()" class="cart-calculate">Calculate</a>
+                            </div>
+                            <div class="shop-total">
+                                <span>Pay Total</span>
+                                <span class="total-amount">$ {{total}}</span>
+                            </div>
+                            <a routerLink="/checkout" class="check-link">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cart end -->
+        <!-- footer start -->
+        <app-main-footer></app-main-footer>
+        <!-- footer end -->
+        <!-- back to top start -->
+        <a href="javascript:void(0)" class="scroll" id="top">
+            <span><i class="fa fa-angle-double-up"></i></span>
+        </a>
+    </body>
+</html>

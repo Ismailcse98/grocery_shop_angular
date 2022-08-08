@@ -1,0 +1,14 @@
+.plus-minus button{
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.pro-remove{
+  cursor: pointer;
+}
+.cart-pro-image img{
+  width: 80px;
+}
+.cart-calculate,
+.check-link{
+  cursor: pointer;
+}

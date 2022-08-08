@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="logo">
+    <img src="assets/image/logo1.png" alt="Logo not found">
+  </div>
+  <div class="invoice-title">
+    <h2>Your Order Details</h2>
+    <h3>Your Order Is On The Way</h3>
+    <h4>Order ID = {{invoiceProduct[0].c_order_id}}</h4>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-data">
+        <th scope="col">SL</th>
+        <th scope="col">Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-data" *ngFor="let item of invoiceProduct;let i = index;">
+        <td scope="row">{{++i}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.qty}}</td>
+        <td>{{item.qty * item.price}} /=</td>
+      </tr>
+      <tr>
+        <td colspan="3" scope="row"><strong>Shipping price</strong></td>
+        <td class="table-data">50/=</td>
+      </tr>
+      <tr>
+        <td colspan="3" scope="row"><strong>Total price</strong></td>
+        <td class="table-data">{{invoiceProduct[0].total}} /=</td>
+      </tr>
+      <tr class="table-data">
+        <td colspan="2" scope="row">
+          <strong>Signiture</strong>
+        </td>
+        <td colspan="2" scope="row">
+         <strong> SHIPPING ADDRESS</strong>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<button (click)="clearInvoice()" class="btn btn-primary">Clear Invoice</button>
+</div>

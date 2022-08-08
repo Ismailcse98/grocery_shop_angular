@@ -1,0 +1,42 @@
+.cat-item {
+    text-align: center;
+}
+
+.cat-item img {
+    width: 100%;
+}
+
+.items {
+    margin: 25px 0;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.tr-pro-img img {
+    width: 100%;
+}
+
+.blog_items .blog-content {
+    padding: 15px;
+}
+
+.blog_items .blog-content .blog-title {
+    margin: 10px 0;
+}
+
+.blog_items .blog-content p {
+    margin: 15px 0;
+}
+
+.blog_items .blog-content button {
+    background: orange;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.blog1 h2 {
+    padding: 25px 0;
+}
